@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="normilize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700;900&family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#">
+          <img class="img__klava" src="img/image.png" alt="клавиатура" />
+        </a>
+        <ul class="mеnu">
+          <li class="list"><a class="item" href="#">КУРСЫ</a></li>
+          <li class="list"><a class="item" href="#">ПОМОЩЬ</a></li>
+        </ul>
+        <div class="ava">
+          <img src="img/image.png" alt="" />
+        </div>
+      </nav>
+    </header>
+    <section class="text-info">
+      <div class="wrapper">
+        <h1 class="title">УРОК 5. Математика</h1>
+        <p class="text-sub">
+          Языки программирования нередко используются для математических
+          вычеслений: от простого сложения до высшей математики. <br />
+          C# исключением не стал, и сегодня мы рассмотрим несколько способов
+          работы с математикой.
+        </p>
+        <h2 class="text">Арифметика на кончиках пальцев</h2>
+        <p class="text-sub">
+          Как ты знаешь, в арифметике мы оперирует известными нам числами. И
+          самые частые операции - это сложение, вычитание, умножение, деление,
+          реже нахождение остатка. <br />
+
+          Взглянем, как их можно применить:
+        </p>
+        <code class="code">
+          <div class="container-code">
+            <div class="result">
+              <span class="blue">int</span> <span class="black">result1</span>
+              <span class="orange">= </span
+              ><span class="purple">1<span class="symbol">+</span>2</span
+              ><span class="defoult">; </span><span class="gray">// 3</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">int</span> <span class="black">result2</span>
+              <span class="orange">= </span
+              ><span class="purple">1<span class="symbol">-</span>2</span
+              ><span class="defoult">; </span><span class="gray">// -1</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">int</span> <span class="black">result3</span>
+              <span class="orange">= </span
+              ><span class="purple">1<span class="symbol">*</span>2</span
+              ><span class="default">; </span><span class="gray">// 2</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">double</span>
+              <span class="black">result4</span> <span class="orange">= </span
+              ><span class="purple">1<span class="symbol">/</span>2</span
+              ><span class="default">; </span
+              ><span class="gray"
+                >// 0,5 (обязательно в таком случае нужно оздать дробную
+                переменную)</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">int</span> <span class="black">result5</span>
+              <span class="orange">= </span
+              ><span class="purple">1<span class="symbol">/</span>2</span
+              ><span class="default">; </span><span class="gray">// 0?!</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">int</span> <span class="black">result6</span>
+              <span class="orange">= </span
+              ><span class="purple">3<span class="symbol">%</span>2</span
+              ><span class="default">; </span
+              ><span class="gray"
+                >// 1 ("%" находит остаток от деления, а не проценты)</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">int</span> <span class="black">result7</span>
+              <span class="orange">= </span
+              ><span class="purple">1<span class="symbol">/</span>0</span
+              ><span class="default">; </span
+              ><span class="gray"
+                >// ошибка! DivideByZeroException - на ноль делить нельзя</span
+              ><br />
+            </div>
+          </div>
+        </code>
+        <h2 class="text">Функции</h2>
+        <p class="text-sub">
+          Подключим к нашей математике и алгебру с геометрией. Там часто
+          используются функции, по типу логарифма, синуса, косинуса и так далее.
+          <br />
+
+          Для работы с ними нужно использовать слово Math:
+        </p>
+        <code class="code">
+          <div class="container-code">
+            <div class="result">
+              <span class="blue">double</span>
+              <span class="black">rounded</span> <span class="orange">= </span
+              ><span class="secret">Math</span><span class="dot">.</span
+              ><span class="pink">Round</span><span class="point">(</span
+              ><span class="purple">0.6</span><span class="pointt">)</span
+              ><span class="defoult">; </span
+              ><span class="gray"
+                >// округление до целого (если округляется 0.5 - то округлится
+                до ближайшего чётного - 0)</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">double</span>
+              <span class="black">ceiled</span> <span class="orange">= </span
+              ><span class="secret">Math</span><span class="dot">.</span
+              ><span class="pink">Ceil</span><span class="point">(</span
+              ><span class="purple">0.1</span><span class="pointt">)</span
+              ><span class="defoult">; </span
+              ><span class="gray"
+                >// округление до целого (если округляется 0.5 - то округлится
+                до ближайшего чётного - 0)</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">double</span>
+              <span class="black">floored</span> <span class="orange">= </span
+              ><span class="secret">Math</span><span class="dot">.</span
+              ><span class="pink">Floor</span><span class="point">(</span
+              ><span class="purple">0.9</span><span class="pointt">)</span
+              ><span class="defoult">; </span
+              ><span class="gray"
+                >// округление "до пола": к ближайшему меньшему целому</span
+              ><br />
+            </div>
+            <div class="result">
+              <span class="blue">double</span> <span class="black">sin</span>
+              <span class="orange">= </span><span class="secret">Math</span
+              ><span class="dot">.</span><span class="pink">Sin</span
+              ><span class="point">(</span><span class="purple">90</span
+              ><span class="pointt">)</span><span class="defoult">; </span
+              ><span class="gray">// синус 90°</span><br />
+            </div>
+          </div>
+          <h2 class="text">Математическое переполнение</h2>
+        </code>
+        <p class="text-sub">
+          Пару уроков назад мы узнали, что в C# есть просто куча типов данных
+          для чисел. Отличаются они лишь вместимостью и занимаемой памятью.
+          Поэтому иногда разработчики используют для экономии маленькие типы:
+        </p>
+        <div class="button">
+          <a href="#" class="btn">НАЗАД</a>
+          <a href="#" class="btn">ДАЛЬШЕ </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
